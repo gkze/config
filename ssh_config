@@ -1,0 +1,5 @@
+Host *
+  AddKeysToAgent yes
+  ForwardAgent yes
+  LogLevel ERROR
+  StrictHostKeyChecking no
