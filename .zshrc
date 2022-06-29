@@ -45,14 +45,15 @@ source <(kubectl completion zsh)
 # ASDF - instal multiple versions of CLI tools & languages
 source "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
 
-# Alias for luamake to where it was built
-alias luamake="${HOME}/Development/github.com/sumneko/lua-language-server/3rd/luamake/luamake"
-
 # Alias pbcopy & pbpaste to pbc & pbp for speed
 alias pbc=pbcopy pbp=pbpaste
 
 # nvc == NeoVim Config. `cd`s into ~/.config/nvim and opens it up
 alias nvc='cd ~/.config/nvim && nvim init.lua'
+
+# Google Cloud SDK
+source "${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
 #                  === executable / $PATH-related settings ===                  #
