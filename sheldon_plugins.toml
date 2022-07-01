@@ -25,6 +25,7 @@ github = "zsh-users/zsh-autosuggestions"
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
+use = ["zsh-completions.plugin.zsh"]
 
 [plugins.zsh-fzf-history-search]
 github = "joshskidmore/zsh-fzf-history-search"
