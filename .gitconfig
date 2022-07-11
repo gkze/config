@@ -5,7 +5,7 @@
 	pager = delta
 
 [diff]
-	colorMoved = zebra
+	colorMoved = default
 
 [delta]
 	features = decorations
@@ -35,6 +35,9 @@
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 
+[add.interactive]
+	useBuiltin = false
+
 [merge]
 	conflictstyle = diff3
 
@@ -51,6 +54,7 @@
 	signingkey = 9578FF9AB0BDE622307E7E833A7266FAC0D2F08D
 	name = gkze
 	email = george.kontridze@gmail.com
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

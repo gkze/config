@@ -107,6 +107,9 @@ export PATH="${HOME}/.local/bin:${PATH}"
 # Plaid Go Monorepo executables
 export PATH="${PLAID_PATH}/go.git/bin:${PATH}"
 
+# Kubectl Krew (plugin manager)
+export PATH="${PATH}:${HOME}/.krew/bin"
+
 # Formula-bundled man pages
 export MANPATH="$(fd -td ^man$ ${HOMEBREW_PREFIX}/Cellar | tr '\n' ':' | sed 's/:$//g'):${MANPATH}"
 

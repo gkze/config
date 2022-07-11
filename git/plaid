@@ -1,4 +1,4 @@
+# vi: ft=gitconfig
 [user]
 	name = gkontridze
 	email = gkontridze@plaid.com
-	signingkey = 9578FF9AB0BDE622307E7E833A7266FAC0D2F08D
