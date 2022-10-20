@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    ".yamlfmt": "yaml",
+    "**/home/.config/bat/config": "shellscript",
+    "**/home/.config/git/*": "ini",
+    "**/home/.ssh/config": "ssh_config"
+  }
+}

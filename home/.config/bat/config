@@ -1,0 +1,6 @@
+# vi: ft=shell
+# shellcheck shell=sh
+
+# Theme
+# shellcheck disable=SC2215
+--theme="gruvbox-dark"

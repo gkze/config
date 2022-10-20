@@ -1,0 +1,21 @@
+[brew]
+
+[commands]
+
+[composer]
+
+[firmware]
+
+[flatpak]
+
+[git]
+repos = ["~/Development/*/*/*"]
+arguments = "--no-ff --rebase --autostash"
+
+[linux]
+
+[npm]
+
+[pre_commands]
+
+[windows]

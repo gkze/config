@@ -1,0 +1,67 @@
+# vi: ft=gitconfig
+[alias]
+	branches = branch --sort=committerdate --format='%(committerdate) || %(refname)'
+
+[commit]
+	gpgsign = true
+
+[core]
+	pager = delta
+
+[diff]
+	colorMoved = default
+
+[delta]
+	features = decorations
+	navigate = true
+
+[delta "interactive"]
+	keep-plus-minus-markers = false
+
+[delta "decorations"]
+	commit-decoration-style = blue ol
+	commit-style = raw
+	file-style = omit
+	hunk-header-decoration-style = blue box
+	hunk-header-file-style = red
+	hunk-header-line-number-style = "#067a00"
+	hunk-header-style = file line-number syntax
+
+[fetch]
+	prune = true
+
+[includeIf "gitdir:~/Development/github.com/**"]
+	path = ~/.config/git/personal
+
+[includeIf "gitdir:~/iCloud\ Drive/Development/github.com/**"]
+	path = ~/.config/git/personal
+
+[includeIf "gitdir:~/Development/github.plaid.com/**"]
+	path = ~/.config/git/plaid
+
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+
+[add.interactive]
+	useBuiltin = false
+
+[merge]
+	conflictstyle = diff3
+
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
+[rebase]
+	pull = true
+
+[user]
+	signingkey = 9578FF9AB0BDE622307E7E833A7266FAC0D2F08D
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
