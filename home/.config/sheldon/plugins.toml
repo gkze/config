@@ -1,53 +1,40 @@
-# `sheldon` configuration file
-# ----------------------------
-#
-# You can modify this file directly or you can use one of the following
-# `sheldon` commands which are provided to assist in editing the config file:
-#
-# - `sheldon add` to add a new plugin to the config file
-# - `sheldon edit` to open up the config file in the default editor
-# - `sheldon remove` to remove a plugin from the config file
-#
-# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+shell = 'zsh'
 
-shell = "zsh"
+[plugins]
+[plugins.base16]
+github = 'tinted-theming/base16-shell'
+
+[plugins.docker-completions]
+apply = ['fpath']
+remote = 'https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker'
+
+[plugins.fast-syntax-highlighting]
+github = 'zdharma-continuum/fast-syntax-highlighting'
+
+[plugins.fzf]
+github = 'junegunn/fzf'
+use = ['shell/completion.zsh', 'shell/key-bindings.zsh']
+
+[plugins.local]
+local = '~/.zsh/plugins'
+
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+
+[plugins.zsh-completions]
+github = 'zsh-users/zsh-completions'
+
+[plugins.zsh-defer]
+github = 'romkatv/zsh-defer'
+
+[plugins.zsh-fzf-history-search]
+github = 'joshskidmore/zsh-fzf-history-search'
+
+[plugins.zsh-histdb]
+github = 'larkery/zsh-histdb'
+
+[plugins.zsh-vi-mode]
+github = 'jeffreytse/zsh-vi-mode'
 
 [templates]
 defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
-
-[plugins]
-
-[plugins.zsh-defer]
-github = "romkatv/zsh-defer"
-
-[plugins.base16]
-github = "tinted-theming/base16-shell"
-
-[plugins.zsh-histdb]
-github = "larkery/zsh-histdb"
-
-[plugins.fast-syntax-highlighting]
-github = "zdharma-continuum/fast-syntax-highlighting"
-
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
-
-[plugins.fzf]
-github = "junegunn/fzf"
-use = ["shell/completion.zsh", "shell/key-bindings.zsh"]
-
-[plugins.zsh-fzf-history-search]
-github = "joshskidmore/zsh-fzf-history-search"
-
-[plugins.zsh-vi-mode]
-github = "jeffreytse/zsh-vi-mode"
-
-[plugins.docker-completions]
-remote = "https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker"
-apply = ["fpath"]
-
-[plugins.local]
-local = "~/.zsh/plugins"

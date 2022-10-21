@@ -71,7 +71,7 @@ bashcompinit
 
 # Function to scan a directory tree for a desired directory name pattern and
 # compile a "/.*PATH/"-style list, i.e. given ^bin$ /dir1/bin:/dir2/bin, etc
-find_path_dirs() {
+function find_path_dirs() {
   local searchpath="${1}" pattern="${2}" maxdepth="${3}"
 
   fd -d"${maxdepth}" -td "${pattern}" "${searchpath}" | sd '/\n' ':' | sd ':$' ''
@@ -87,6 +87,7 @@ declare -a PATHS=(
   "${HOME}/.krew/bin"
   "${HOME}/go/bin"
   "${HOME}/.cargo/bin"
+  "${HOMEBREW_PREFIX}/opt/libxml2/bin"
   "${HOMEBREW_PREFIX}/opt/openssl@3/bin"
   "$(find_path_dirs "${HOMEBREW_PREFIX}/lib/ruby/gems" "^bin$" 2)"
   "${HOMEBREW_PREFIX}/opt/ruby/bin"

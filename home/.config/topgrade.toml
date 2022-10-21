@@ -9,8 +9,8 @@
 [flatpak]
 
 [git]
-repos = ["~/Development/*/*/*"]
-arguments = "--no-ff --rebase --autostash"
+arguments = '--no-ff --rebase --autostash'
+repos = ['~/Development/*/*/*']
 
 [linux]
 
