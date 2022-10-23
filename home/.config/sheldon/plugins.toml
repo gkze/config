@@ -36,5 +36,8 @@ github = 'larkery/zsh-histdb'
 [plugins.zsh-vi-mode]
 github = 'jeffreytse/zsh-vi-mode'
 
+[plugins.zsh-system-clipboard]
+github = "kutsan/zsh-system-clipboard"
+
 [templates]
 defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"

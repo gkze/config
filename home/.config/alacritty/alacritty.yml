@@ -23,7 +23,7 @@ window:
     lines: 80
   position:
     x: 306
-    y: 223
+    y: 280
 colors:
   # Default colors
   primary:

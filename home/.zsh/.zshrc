@@ -18,13 +18,17 @@ typeset -U PATHS MANPATHS PATH MANPATH
 # Initialize Sheldon and load configured plugins
 eval "$(sheldon source)"
 
-# Add local Zsh functions path
-# shellcheck disable=SC2206
-fpath=( "${XDG_CONFIG_DATA:-"${HOME}.local/share"}/zsh/site-functions" $fpath )
-
 # Set and export the Homebrew prefix here since it is needed below and during
 # general shell use
 export HOMEBREW_PREFIX="/opt/homebrew"
+
+# Add local Zsh functions path
+# shellcheck disable=SC2206
+fpath=(
+  "${XDG_CONFIG_DATA:-"${HOME}.local/share"}/zsh/site-functions"
+  "${HOMEBREW_PREFIX}/share/zsh/site-functions"
+  $fpath
+)
 
 # Since a lot of the below configuration depends on Homebrew-installed
 # software, let's activate it now. Taken from the output of "brew shellenv"
@@ -49,8 +53,8 @@ done
 
 # Aliases
 alias \
-  exap='exa -agilstype --color=always --icons' \
-  exat='exa -gilstype --color=always --icons --tree' \
+  exap='exa -FlabhHistype --color=always --icons' \
+  exat='exa -FlabhHistype --color=always --icons --tree' \
   kc=kubectl \
   nvc='cd "${HOME}/.config/nvim" && nvim init.lua' \
   pbc=pbcopy \
@@ -87,6 +91,7 @@ declare -a PATHS=(
   "${HOME}/.krew/bin"
   "${HOME}/go/bin"
   "${HOME}/.cargo/bin"
+  "${PNPM_HOME}"
   "${HOMEBREW_PREFIX}/opt/libxml2/bin"
   "${HOMEBREW_PREFIX}/opt/openssl@3/bin"
   "$(find_path_dirs "${HOMEBREW_PREFIX}/lib/ruby/gems" "^bin$" 2)"
