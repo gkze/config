@@ -270,8 +270,6 @@ def main(argv: list[str]) -> None:
     if not argv:
         parser.print_help()
 
-    print(args.command)
-
     if args.command in {"format", "fmt", "f"}:
         fmtsrcs()
 
