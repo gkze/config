@@ -3,6 +3,7 @@ export \
   DOCKER_SCAN_SUGGEST="false" \
   EDITOR="nvim" \
   GPG_TTY="$(tty)" \
+  GRAB_HOME="${HOME}/Development" \
   HOMEBREW_BUNDLE_FILE="${HOME}/.config/Brewfile" \
   MANPAGER="sh -c 'col -bx | bat -l man -p'" \
   PATH="/opt/homebrew/bin:${PATH}" \

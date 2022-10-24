@@ -78,7 +78,7 @@ bashcompinit
 function find_path_dirs() {
   local searchpath="${1}" pattern="${2}" maxdepth="${3}"
 
-  fd -d"${maxdepth}" -td "${pattern}" "${searchpath}" | sd '/\n' ':' | sd ':$' ''
+  fd -d"${maxdepth}" -td "${pattern}" "${searchpath}" | sd '/\n' ':' | sd '(^:|:$)' ''
 }
 
 # Configure PATH via a readonly array which then gets joined on ":" by Zsh's
@@ -108,5 +108,8 @@ declare -a MANPATHS=(
 
 # Single export for both by joining arrays above
 export \
-  PATH="${(j.:.)PATHS}:${PATH}" \
+  PATH="${(j.:.)PATHS}:${PATH}"
   MANPATH="${(j.:.)MANPATHS}:${MANPATH}"
+
+# Configure Gruvbox Dark Soft theme for tools that support LS_COLORS
+export LS_COLORS="$(vivid generate gruvbox-dark-soft)"

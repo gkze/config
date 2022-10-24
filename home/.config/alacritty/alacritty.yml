@@ -1,11 +1,9 @@
 ---
 draw_bold_text_with_bright_colors: false
-
 font:
   normal:
     family: Hack Nerd Font Mono
   size: 12.0
-
 key_bindings:
   - key: F
     mods: Alt
@@ -13,10 +11,8 @@ key_bindings:
   - key: B
     mods: Alt
     chars: "\eb"
-
 shell:
   program: /opt/homebrew/bin/tmux
-
 window:
   dimensions:
     columns: 250
